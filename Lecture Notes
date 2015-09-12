@@ -1,0 +1,93 @@
+Lecture Notes:
+
+1 – Program consists of Objects.
+
+2 – Objects interact with each other.
+
+3 – Objects are instance of Class
+
+class UserData {
+    static String name;
+    static int age;
+}
+class PlayerData {
+   static int playerCount;
+   String name;
+   int age;
+}
+public class Student {
+
+   public String name;  // Student's name.
+   public double test1, test2, test3;   // Grades on three tests.
+   
+   public double getAverage() {  // compute average test grade
+      return (test1 + test2 + test3) / 3;
+   }
+   
+}  // end of class Student
+System.out.println("Hello, "  +  std.name  +  ".  Your test grades are:");
+System.out.println(std.test1);
+System.out.println(std.test2);
+System.out.println(std.test3
+Student std, std1,       // Declare four variables of
+          std2, std3;    //   type Student.
+
+std = new Student();     // Create a new object belonging
+                         //   to the class Student, and
+                         //   store a reference to that
+                         //   object in the variable std.
+
+std1 = new Student();    // Create a second Student object
+                         //   and store a reference to
+                         //   it in the variable std1.
+
+std2 = std1;             // Copy the reference value in std1
+                         //   into the variable std2.
+
+std3 = null;             // Store a null reference in the
+                         //   variable std3.
+                         
+std.name = "John Smith";  // Set values of some instance variables.
+std1.name = "Mary Jones";
+
+     // (Other instance variables have default
+     //    initial values of zero.)
+     final Student stu = new Student();
+
+stu.name = "John Doe";  // Change data in the object;
+                        // The value stored in stu is not changed!
+                        // It still refers to the same object.
+                        void dontChange(int z) {                void change(Student s) {
+    z = 42;                                  s.name = "Fred";
+}                                       }
+
+The lines:                              The lines:
+
+   x = 17;                                 stu.name = "Jane";
+   dontChange(x);                          change(stu);
+   System.out.println(x);                  System.out.println(stu.name);
+ 
+output the value 17.                    output the value "Fred".
+ 
+The value of x is not                   The value of stu is not
+changed by the subroutine,              changed, but stu.name is changed.
+which is equivalent to                  This is equivalent to
+
+   z = x;                                  s = stu;
+   z = 42;                                 s.name = "Fred";
+
+list = new int[3];
+list[1] = 17;
+newlist = list; // newlist points to the same array as list!
+newlist[1] = 42;
+System.out.println( list[1] )
+Student[] classlist;  // Declare a variable of type Student[].
+classlist = new Student[30];  // The variable now points to an array.
+Student[] classlist;
+classlist = new Student[30];
+for ( int i = 0; i < 30; i++ ) {
+    classlist[i] = new Student();
+}
+                        
+
+ 
